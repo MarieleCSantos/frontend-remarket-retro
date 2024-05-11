@@ -17,4 +17,10 @@ export class UserService {
   public login(loginData) {
     return this.httpclient.post(this.PATH_OF_API + "/authenticate", loginData, { headers: this.requestHeader });
   }
+
+  public roleMatch(allowedRoles): boolean {
+    let isMatch = false;
+    
+    return
+  }
 }

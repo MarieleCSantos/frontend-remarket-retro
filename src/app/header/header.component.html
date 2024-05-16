@@ -11,10 +11,14 @@
           <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/admin">Admin Dashboard</a>
+          <a class="nav-link active" aria-current="page" routerLink="/admin"
+          *ngIf="userService.roleMatch(['Admin'])"
+          >Admin Dashboard</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/user">User Dashboard</a>
+          <a class="nav-link active" aria-current="page" routerLink="/user"
+          *ngIf="userService.roleMatch(['User'])"
+          >User Dashboard</a>
         </li>
         <!-- <li class="nav-item">
             <a class="nav-link" href="#">Link</a>

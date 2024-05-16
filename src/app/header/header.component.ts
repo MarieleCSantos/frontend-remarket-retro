@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserAuthService } from '../_services/user-auth.service';
 import { Router } from '@angular/router';
+import { UserService } from '../_services/user.service';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   constructor(private userAuthService: UserAuthService, 
+    public userService: UserService,
     private router: Router
   ) { }
 
@@ -25,4 +27,5 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/home']);
   }
 
+  
 }

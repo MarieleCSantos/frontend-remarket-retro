@@ -1,4 +1,21 @@
-<nav class="navbar navbar-expand-lg" style="background-color: #cccccc;">
+<mat-toolbar color="primary">
+  <span>
+    RemarketRetro
+  </span>
+  <span class="space-buttons"></span>
+  <button *ngIf="! isLoggedIn()" routerLink="/login" mat-raised-button color="primary">
+    entre ou cadastre-se
+  </button>
+  <button *ngIf="isLoggedIn()" (click)="logout()" mat-raised-button color="warn">
+    sair
+  </button>
+</mat-toolbar>
+
+
+
+
+
+<!-- <nav class="navbar navbar-expand-lg" style="background-color: #cccccc;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">RemarketRetro</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -19,7 +36,7 @@
           <a class="nav-link active" aria-current="page" routerLink="/user"
           *ngIf="userService.roleMatch(['User'])"
           >User Dashboard</a>
-        </li>
+        </li> -->
         <!-- <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li> -->
@@ -37,14 +54,14 @@
         <!-- <li class="nav-item">
             <a class="nav-link disabled" aria-disabled="true">Disabled</a>
           </li> -->
-      </ul>
+      <!-- </ul> -->
       <!-- <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form> -->
-      <button *ngIf="! isLoggedIn()" type="button" class="btn btn-success" routerLink="/login">entre ou
+      <!-- <button *ngIf="! isLoggedIn()" type="button" class="btn btn-success" routerLink="/login">entre ou
         cadastre-se</button>
       <button *ngIf="isLoggedIn()" type="button" class="btn btn-danger" (click)="logout()">logout</button>
     </div>
   </div>
-</nav>
+</nav> -->

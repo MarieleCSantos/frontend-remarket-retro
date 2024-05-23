@@ -44,7 +44,8 @@
                 </form>
             </div>
             <div class="col-6">
-                image area
+                <input type="file" multiple value="select" #selectFile 
+                    (change)="onFileSelected($event)">
             </div>
         </div>
     </div>

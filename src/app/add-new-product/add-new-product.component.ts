@@ -34,6 +34,7 @@ export class AddNewProductComponent implements OnInit {
     this.productService.addProduct(productFormData).subscribe(
       (response: Product) => {
         productForm.reset();
+        this.product.productImages = [];
       },
       (error: HttpErrorResponse) => {
         console.log(error);
@@ -78,5 +79,9 @@ export class AddNewProductComponent implements OnInit {
 
   removeImages(i: number) {
     this.product.productImages.splice(i, 1);
+  }
+
+  fileDropped(fileHandle: FileHandle) {
+    this.product.productImages.push(fileHandle);
   }
 }

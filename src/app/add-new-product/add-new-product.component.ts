@@ -82,6 +82,15 @@ export class AddNewProductComponent implements OnInit {
   }
 
   fileDropped(fileHandle: FileHandle) {
-    this.product.productImages.push(fileHandle);
+    const file = fileHandle.file;
+
+    const newFileHandle: FileHandle = {
+      file: file,
+      url: this.sanitizer.bypassSecurityTrustUrl(
+        window.URL.createObjectURL(file)
+      )
+    }
+  
+    this.product.productImages.push(newFileHandle);
   }
 }

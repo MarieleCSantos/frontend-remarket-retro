@@ -16,12 +16,13 @@ const routes: Routes = [
   { path: 'user', component: UserComponent, canActivate: [AuthGuard], data: { roles: ['User'] } },
   { path: 'login', component: LoginComponent },
   { path: 'forbidden', component: ForbiddenComponent },
-  { path: 'addNewProduct', component: AddNewProductComponent, canActivate: [AuthGuard], data: { roles: ['Admin'] },
+  {
+    path: 'addNewProduct', component: AddNewProductComponent, canActivate: [AuthGuard], data: { roles: ['Admin'] },
     resolve: {
       product: ProductResolveService
     }
   },
-  { path: 'showProductDetails', component: ShowProductDetailsComponent}
+  { path: 'showProductDetails', component: ShowProductDetailsComponent, canActivate: [AuthGuard], data: { roles: ['Admin'] } }
 ];
 
 @NgModule({

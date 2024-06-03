@@ -5,6 +5,7 @@ import { ProductService } from '../_services/product.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { FileHandle } from '../_model/file-handle.model';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-add-new-product',
@@ -12,8 +13,10 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./add-new-product.component.css']
 })
 export class AddNewProductComponent implements OnInit {
+  isNewProduct = true;
 
   product: Product = {
+    productId: null,
     productName: "",
     productDescription: "",
     productDiscountedPrice: 0,
@@ -22,15 +25,21 @@ export class AddNewProductComponent implements OnInit {
   }
 
   constructor(private productService: ProductService,
-    private sanitizer: DomSanitizer) { }
+    private sanitizer: DomSanitizer,
+    private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.product = this.activatedRoute.snapshot.data['product'];
+
+    if (this.product && this.product.productId) {
+      this.isNewProduct = false;
+    }
   }
 
   addProduct(productForm: NgForm) {
 
     const productFormData = this.prepareFormData(this.product);
-    
+
     this.productService.addProduct(productFormData).subscribe(
       (response: Product) => {
         productForm.reset();
@@ -47,7 +56,7 @@ export class AddNewProductComponent implements OnInit {
 
     formData.append(
       'product',
-      new Blob([JSON.stringify(product)], {type: 'application/json'})
+      new Blob([JSON.stringify(product)], { type: 'application/json' })
     );
 
     for (var i = 0; i < product.productImages.length; i++) {
@@ -90,7 +99,7 @@ export class AddNewProductComponent implements OnInit {
         window.URL.createObjectURL(file)
       )
     }
-  
+
     this.product.productImages.push(newFileHandle);
   }
 }

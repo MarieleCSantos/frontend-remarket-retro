@@ -1,1 +1,53 @@
-<p>buy-product works!</p>
+<div class="container mt-5">
+    <div class="card p-3">
+        <div class="row">
+            <div class="col-6">
+                <form #orderForm="ngForm" 
+                    (ngSubmit)="placeOrder(orderForm)">
+
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Full name</mat-label>
+                        <input matInput 
+                            placeholder="Full name" 
+                            [(ngModel)]="orderDetails.fullName" 
+                            name="fullName">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Full address</mat-label>
+                        <input matInput 
+                            placeholder="Full address" 
+                            [(ngModel)]="orderDetails.fullAddress" 
+                            name="fullAddress">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Contact Number</mat-label>
+                        <input matInput 
+                            placeholder="Contact Number" 
+                            [(ngModel)]="orderDetails.contactNumber" 
+                            name="contactNumber">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Alternate Contact Number</mat-label>
+                        <input matInput 
+                            placeholder="Alternate Contact Number" 
+                            [(ngModel)]="orderDetails.alternateContactNumber" 
+                            name="alternateContactNumber">
+                    </mat-form-field>
+
+                    <div align="right">
+                        <button type="submit" mat-stroked-button color="primary">Place Order</button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="col-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde optio in excepturi ducimus aliquid numquam
+                commodi cum voluptatem impedit necessitatibus eveniet tenetur obcaecati, laudantium vero. Nesciunt optio
+                hic ducimus aliquam.
+            </div>
+        </div>
+    </div>
+</div>

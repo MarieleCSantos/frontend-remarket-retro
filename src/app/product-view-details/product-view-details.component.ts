@@ -24,8 +24,10 @@ export class ProductViewDetailsComponent implements OnInit {
     this.selectedProductIndex = index;
   }
 
-  buyProduct() {
-    this.router.navigate(['/buyProduct']);
+  buyProduct(productId) {
+    this.router.navigate(['/buyProduct', {
+      isSingleProductCheckout: true, id: productId
+    }]);
     
   }
 

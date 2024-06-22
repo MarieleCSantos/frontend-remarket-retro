@@ -14,12 +14,12 @@ export class ProductService {
     return this.httpClient.post<Product>("http://localhost:9090/addNewProduct", product);
   }
 
-  public getAllProducts(pageNumber) {
-    return this.httpClient.get<Product[]>("http://localhost:9090/getAllProducts?pageNumber="+pageNumber)
+  public getAllProducts(pageNumber, searchKeyword: string = "") {
+    return this.httpClient.get<Product[]>("http://localhost:9090/getAllProducts?pageNumber="+pageNumber+"&searchKey="+searchKeyword);
   }
 
   public getProductDetailsById(productId) {
-    return this.httpClient.get<Product>("http://localhost:9090/getProductDetailsById/" + productId)
+    return this.httpClient.get<Product>("http://localhost:9090/getProductDetailsById/" + productId);
   }
 
   public deleteProduct(productId: number) {

@@ -15,7 +15,8 @@ export class ProductService {
   }
 
   public getAllProducts(pageNumber, searchKeyword: string = "") {
-    return this.httpClient.get<Product[]>("http://localhost:9090/getAllProducts?pageNumber="+pageNumber+"&searchKey="+searchKeyword);
+    return this.httpClient.get<Product[]>("http://localhost:9090/getAllProducts?pageNumber="+pageNumber
+      +"&searchKey="+searchKeyword);
   }
 
   public getProductDetailsById(productId) {

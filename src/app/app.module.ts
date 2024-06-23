@@ -32,6 +32,9 @@ import { ProductViewDetailsComponent } from './product-view-details/product-view
 import { BuyProductComponent } from './buy-product/buy-product.component';
 import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
 import { RegisterComponent } from './register/register.component';
+import { CartComponent } from './cart/cart.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -50,7 +53,8 @@ import { RegisterComponent } from './register/register.component';
     ProductViewDetailsComponent,
     BuyProductComponent,
     OrderConfirmationComponent,
-    RegisterComponent
+    RegisterComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +70,9 @@ import { RegisterComponent } from './register/register.component';
     MatGridListModule,
     MatTableModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [
     AuthGuard,

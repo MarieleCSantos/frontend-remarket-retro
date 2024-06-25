@@ -21,11 +21,11 @@
 
 </mat-toolbar> -->
 
-<mat-toolbar color="primary">
+<mat-toolbar>
   <button mat-icon-button (click)="sidenav.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>RemarketRetro</span>
+  <img src="\assets\logo.png" class="logo">
   <span class="spacer"></span>
   <button *ngIf="!isLoggedIn()" routerLink="/login" mat-raised-button color="primary">
     Entre ou Cadastre-se

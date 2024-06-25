@@ -16,4 +16,14 @@
 
 .logo {
     width: 8%;
+    cursor: pointer;
+}
+
+.mat-flat-button {
+    border-radius: 50px;
+    padding: 0.25rem 4rem;
+    background: white;
+    color: black;
+    font-weight: 500;
+    font-family: 'Sansation', sans-serif
 }

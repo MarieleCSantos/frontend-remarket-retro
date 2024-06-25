@@ -25,9 +25,9 @@
   <button mat-icon-button (click)="sidenav.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <img src="\assets\logo.png" class="logo">
+  <img src="\assets\logo.png" routerLink="/" class="logo">
   <span class="spacer"></span>
-  <button *ngIf="!isLoggedIn()" routerLink="/login" mat-raised-button color="primary">
+  <button *ngIf="!isLoggedIn()" routerLink="/login" mat-flat-button color="primary">
     Entre ou Cadastre-se
   </button>
   <button *ngIf="isLoggedIn()" (click)="logout()" mat-raised-button color="warn">

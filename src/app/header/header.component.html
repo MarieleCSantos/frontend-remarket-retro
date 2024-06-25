@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<!-- <mat-toolbar color="primary">
   <span>
     RemarketRetro
   </span>
@@ -19,4 +19,32 @@
   <button *ngIf="isAdmin()" mat-raised-button color="primary" 
     routerLink="/showProductDetails">Show Product Details</button>
 
+</mat-toolbar> -->
+
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>RemarketRetro</span>
+  <span class="spacer"></span>
+  <button *ngIf="!isLoggedIn()" routerLink="/login" mat-raised-button color="primary">
+    Entre ou Cadastre-se
+  </button>
+  <button *ngIf="isLoggedIn()" (click)="logout()" mat-raised-button color="warn">
+    Sair
+  </button>
 </mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" class="example-sidenav">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/">Home</a>
+      <a *ngIf="!isAdmin()" mat-list-item routerLink="/cart">Cart</a>
+      <a *ngIf="isAdmin()" mat-list-item routerLink="/addNewProduct">Add New Product</a>
+      <a *ngIf="isAdmin()" mat-list-item routerLink="/showProductDetails">Show Product Details</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

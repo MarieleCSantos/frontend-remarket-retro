@@ -22,7 +22,7 @@
                     </h2>
                 </div>
                 <div class="mt-3">
-                    Description: <br>
+                    Descrição: <br>
                     {{product.productDescription}}
                 </div>
                 <div class="mt-3">
@@ -30,9 +30,9 @@
                         {{product.productActualPrice}}</b>
                 </div>
                 <div class="mt-5 text-center">
-                    <button mat-raised-button color="warn" style="width: 200px;" (click)="buyProduct(product.productId)">Buy Now</button>
+                    <button class="details-btn-small" style="width: 200px;" (click)="buyProduct(product.productId)">compre agora</button>
                     &nbsp;
-                    <button mat-raised-button style="width: 200px;" (click)="addToCart(product.productId)">Add to Cart</button>
+                    <button class="details-btn-small-white" style="width: 200px;" (click)="addToCart(product.productId)">adicione ao carrinho</button>
                 </div>
             </div>
         </div>

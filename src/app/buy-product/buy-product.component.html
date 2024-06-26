@@ -5,30 +5,30 @@
                 <form #orderForm="ngForm" (ngSubmit)="placeOrder(orderForm)">
 
                     <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Full name</mat-label>
-                        <input matInput placeholder="Full name" [(ngModel)]="orderDetails.fullName" name="fullName">
+                        <mat-label>Nome completo</mat-label>
+                        <input matInput placeholder="Nome completo" [(ngModel)]="orderDetails.fullName" name="fullName">
                     </mat-form-field>
 
                     <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Full address</mat-label>
-                        <input matInput placeholder="Full address" [(ngModel)]="orderDetails.fullAddress"
+                        <mat-label>Endereço</mat-label>
+                        <input matInput placeholder="Endereço" [(ngModel)]="orderDetails.fullAddress"
                             name="fullAddress">
                     </mat-form-field>
 
                     <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Contact Number</mat-label>
-                        <input matInput placeholder="Contact Number" [(ngModel)]="orderDetails.contactNumber"
+                        <mat-label>Telefone</mat-label>
+                        <input matInput placeholder="Telefone" [(ngModel)]="orderDetails.contactNumber"
                             name="contactNumber">
                     </mat-form-field>
 
                     <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Alternate Contact Number</mat-label>
-                        <input matInput placeholder="Alternate Contact Number"
+                        <mat-label>Telefone alternativo</mat-label>
+                        <input matInput placeholder="Telefone alternativo"
                             [(ngModel)]="orderDetails.alternateContactNumber" name="alternateContactNumber">
                     </mat-form-field>
 
                     <div align="right">
-                        <button type="submit" mat-stroked-button color="primary">Place Order</button>
+                        <button type="submit" class="details-btn-small">fazer pedido</button>
                     </div>
                 </form>
 
@@ -37,9 +37,9 @@
                 <table class="table">
                     <thead class="thead">
                         <tr>
-                            <th>Name</th>
-                            <th>Amount</th>
-                            <th>Quantity</th>
+                            <th>Nome</th>
+                            <th>Valor</th>
+                            <th>Quantidade</th>
                             <th>Total</th>
                         </tr>
                     </thead>

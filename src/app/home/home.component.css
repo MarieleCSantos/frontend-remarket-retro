@@ -18,3 +18,14 @@ mat-grid-tile {
     right: 0;
     margin: auto;
 }
+
+.banner img {
+    width: 100%;
+}
+
+.details-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 3px solid #d9d9d9;
+}

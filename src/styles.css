@@ -5,11 +5,48 @@
     font-style: normal;
 }
 
-html, body { height: 100%; }
-.mat-body { margin: 0; 
-    font-family: 'Sansation', sans-serif !important; 
+html,
+body {
+    font-family: 'Sansation', sans-serif;
+}
+
+.mat-body, .mat-body-1, .mat-typography {
+    font-family: 'Sansation', sans-serif;
+}
+
+.mat-h2, .mat-title, .mat-typography h2 {
+    font-family: 'Sansation', sans-serif;
+}
+
+.mat-body {
+    margin: 0;
+    font-family: 'Sansation', sans-serif !important;
 }
 
 .mat-toolbar {
     background: #D9D9D9;
+}
+
+.search-field {
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    width: 100%;
+    margin: 1rem 0;
+    border: 3px solid #D9D9D9;
+    z-index: 1000;
+    padding-right: 1rem;
+}
+
+.search-field input {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    box-shadow: none;
+}
+
+.search-field input:focus {
+    outline: none;
+    box-shadow: none;
 }

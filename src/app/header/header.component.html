@@ -1,38 +1,15 @@
-<!-- <mat-toolbar color="primary">
-  <span>
-    RemarketRetro
-  </span>
-  <span class="space-buttons"></span>
-  <button *ngIf="! isLoggedIn()" routerLink="/login" mat-raised-button color="primary">
-    entre ou cadastre-se
-  </button>
-  <button *ngIf="isLoggedIn()" (click)="logout()" mat-raised-button color="warn">
-    sair
-  </button>
-</mat-toolbar>
-
-<mat-toolbar color="primary" *ngIf="isLoggedIn()">
-  <button mat-raised-button color="primary" routerLink="/">Home</button>
-  <button *ngIf="!isAdmin()" mat-raised-button color="primary" routerLink="/cart">Cart</button>
-  <button *ngIf="isAdmin()" mat-raised-button color="primary" 
-    routerLink="/addNewProduct">Add New Product</button>
-  <button *ngIf="isAdmin()" mat-raised-button color="primary" 
-    routerLink="/showProductDetails">Show Product Details</button>
-
-</mat-toolbar> -->
-
 <mat-toolbar>
-  <button mat-icon-button (click)="sidenav.toggle()">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <img src="\assets\logo.png" routerLink="/" class="logo">
-  <span class="spacer"></span>
-  <button *ngIf="!isLoggedIn()" routerLink="/login" mat-flat-button color="primary">
-    Entre ou Cadastre-se
-  </button>
-  <button *ngIf="isLoggedIn()" (click)="logout()" mat-raised-button color="warn">
-    Sair
-  </button>
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <img src="\assets\logo.png" routerLink="/" class="logo">
+    <span class="spacer"></span>
+    <button *ngIf="!isLoggedIn()" routerLink="/login" mat-flat-button color="primary">
+      Entre ou Cadastre-se
+    </button>
+    <button *ngIf="isLoggedIn()" (click)="logout()" mat-flat-button color="warn">
+      Sair
+    </button>
 </mat-toolbar>
 
 <mat-sidenav-container class="example-container">

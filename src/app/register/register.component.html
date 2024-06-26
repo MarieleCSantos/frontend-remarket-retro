@@ -1,33 +1,32 @@
-<div class="container mt-5">
+<div class="container mt-5" style="width: 50%;">
     <div class="card" style="padding: 20px;">
         <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
             <mat-form-field appearance="outline" class="w-100">
-                <mat-label>Username</mat-label>
+                <mat-label>Usuário</mat-label>
                 <input matInput ngModel name="userName" id="userName" placeholder="Username">
-                <mat-hint>Username</mat-hint>
+                <mat-hint>Usuário</mat-hint>
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="w-100">
-                <mat-label>FirstName</mat-label>
+                <mat-label>Primeiro Nome</mat-label>
                 <input matInput ngModel name="userFirstName" id="userFirstName" placeholder="FirstName">
-                <mat-hint>FirstName</mat-hint>
+                <mat-hint>Primeiro Nome</mat-hint>
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="w-100">
-                <mat-label>LastName</mat-label>
+                <mat-label>Sobrenome</mat-label>
                 <input matInput ngModel name="userLastName" id="userLastName" placeholder="LastName">
-                <mat-hint>LastName</mat-hint>
+                <mat-hint>Sobrenome</mat-hint>
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="w-100">
-                <mat-label>Password</mat-label>
+                <mat-label>Senha</mat-label>
                 <input matInput ngModel name="userPassword" id="userPassword" placeholder="Password">
-                <mat-hint>Password</mat-hint>
+                <mat-hint>Senha</mat-hint>
             </mat-form-field>
 
             <div class="text-center">
-                <button type="submit" mat-raised-button color="primary">Register</button>
-
+                <button class="w-100" type="submit" class="details-btn">Enviar</button>
             </div>
         </form>
     </div>

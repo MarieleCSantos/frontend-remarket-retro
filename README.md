@@ -1,27 +1,21 @@
-# AngRemarketRetro
+# REMARKET-RETRO
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
+## Descrição
+Projeto desenvolvido como Trabalho de Conclusão de Curso na Especialização em Desenvolvimento Fullstack da PUCRS.
 
-## Development server
+Trata-se de uma plataforma ecommerce de brechós, onde é possível comprar e vender produtos usados.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Este é o projeto frontend desenvolvido em Angular, ele chama o backend desenvolvido em Java e Spring Boot que armazena seus dados em uma base MySQL.
 
-## Code scaffolding
+O frontend está hospedado na Netlify e o backend e o banco de dados estão hospedados na Railway.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instruções de uso
+A versão online do projeto está disponível em <a href="https://main--remarket-retro.netlify.app/" target="_blank">remarket-retro.netlify.app</a>.
 
-## Build
+Existem dois tipos de usuários possíveis: comprador e vendedor.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Para se autenticar na plataforma como comprador é necessário realizar primeiramente o cadastro através do botão "entre ou cadastre-se" disponível na página inicial, em seguida é será possível logar.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Para se autenticar como vendedor utilize as seguintes credenciais:
+- usuário: admin123 
+- senha: admin@pass
